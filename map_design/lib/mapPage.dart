@@ -155,8 +155,6 @@ class _mapPageState extends State<mapPage> {
                       LatLng(userLocation!.latitude!, userLocation!.longitude!);
                   locations.add(lastLocation);
                   lastLocation = userCoords;
-
-                  locations.add(userCoords);
                   mapController?.animateCamera(CameraUpdate.newCameraPosition(
                       CameraPosition(target: userCoords, zoom: 14)));
                   _setMarker(userCoords);
